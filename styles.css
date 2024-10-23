@@ -16,8 +16,81 @@ header {
     padding: 32px;
     background-color: #001F3F;
     color: #f8f8ff;
-    border-bottom: 4px solid #EAD8B1;
+    border-bottom: 4px solid;
+  }
+
+section {
+  float: left;
+  width: 100%;
+  padding-bottom:3em;
+  padding-left: 13em;
+  padding-right: 13em;
+  padding-top: 1em;
 }
+a {
+    font-family: "Raleway", sans-serif;
+    text-decoration: none;
+    outline: none;
+  }
+  
+
+.container {
+    position: relative;
+    width: 100%;
+  }
+  
+.image {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: black;
+  }
+  
+  
+  /* Grid container */
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Tablet Styles */
+@media only screen and (min-width: 480px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+.rt-container {
+    margin: 0 auto;
+    padding: 0 12px;
+  }
 
 footer {
     max-width: 1200px;
